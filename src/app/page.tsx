@@ -19,7 +19,7 @@ export default function Home() {
     message: "",
   });
   const [errors, setErrors] = useState<Partial<FormData>>({});
-  const [apiError, setApiError] = useState("");
+  const [apiError, setApiError] = useState<string>("");
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -83,7 +83,7 @@ export default function Home() {
   };
 
   return (
-    <div className="container mt-5">
+    <div className="container mt-5 ">
       {apiError && (
         <div className="alert alert-danger" role="alert">
           {apiError}
